@@ -119,6 +119,33 @@
                 background-color: rgb(48, 105, 191);
             }
 
+            .research-journal{
+                display:inline-block;
+                position:absolute;
+                top:475px;
+                left:1125px;
+                padding-top:11px;
+                padding-bottom:11px;
+                padding-left:70px;
+                padding-right:70px;
+                font-size:15px;
+                border-radius:30px;
+                background-color: rgb(64, 127, 221);
+                color:white;
+                border:none;
+
+                transition:transform 0.3s ease;
+            }
+
+            .research-journal:hover{
+                transform:scale(1.1);
+                cursor:pointer;
+            }
+
+            .research-journal:active{
+                background-color: rgb(48, 105, 191);
+            }
+
             .search-bar{
                 width:610px;
                 padding-top:10px;
@@ -179,6 +206,14 @@
 
             <button class="Interactivities">
                 Interactivities
+            </button>
+
+        </a>
+
+        <a href="research-journal.html" target="_blank">
+
+            <button class="research-journal">
+                Research Journal
             </button>
 
         </a>
