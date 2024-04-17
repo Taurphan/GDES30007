@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
+
+        <title> Creative Coding! </title>
+
+        <style>
+            .dreamy{
+                position:fixed;
+                width:500px;
+                bottom:0;
+                right:0;
+            }
+            .loki{
+                position:fixed;
+                width: 295px;
+                bottom:0;
+                left:0;
+            }
+            .noselect {
+                -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none; /* Safari */
+                -khtml-user-select: none; /* Konqueror HTML */
+                -moz-user-select: none; /* Old versions of Firefox */
+                -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
+            }
+            .title{
+                font-family:Edu NSW ACT Foundation;
+                font-size:6vw;
+                text-align:center;
+                display:block;
+                margin-bottom:0;
+                margin-top:4%;
+            }
+            .p1{
+                font-family:Edu NSW ACT Foundation;
+                font-size:25px;
+                text-align:center;
+                margin:1vh;
+            }
+            .p2{
+                font-family:Edu NSW ACT Foundation;
+                font-size:25px;
+                width:50%;
+                position:absolute;
+                text-align:center;
+                left:0;
+            }
+            .p3{
+                font-family:Edu NSW ACT Foundation;
+                font-size:25px;
+                width:50%;
+                position:absolute;
+                text-align:center;
+                right:0;
+            }
+            .p4{
+                font-family:Edu NSW ACT Foundation;
+                font-size:5vh;
+                text-align:center;
+                display:block;
+                margin-top:10%;
+                padding:10px;
+            }
+            .p4{
+                font-size:25px;
+            }
+            .discord-square-1{
+                background-color:rgb(88, 101, 242);
+                color:rgb(88, 101, 242);
+                width:100%;
+                height:100vh;
+                height: 200px; /* Set the desired height */
+                background: linear-gradient(to top, rgb(88, 101, 242), #ffffff); 
+            }
+            .discord-square-2a{
+                background-color:rgb(88, 101, 242);
+                color:rgb(88, 101, 242);
+                width:100%;
+                height:80vh;
+            }
+            .discord-square-2b{
+                background-color:rgb(88, 101, 242);
+                color:rgb(88, 101, 242);
+                width:100%;
+                height:125vh;
+            }
+            .discord-square-3{
+                background-color:rgb(88, 101, 242);
+                color:rgb(88, 101, 242);
+                width:100%;
+                height:100vh;
+                height: 200px; /* Set the desired height */
+                background: linear-gradient(to top, #ffffff, rgb(88, 101, 242)); 
+            }
+            .convo-1a{
+                font-family:Edu NSW ACT Foundation;
+                font-size:20px;
+                position:absolute;
+                width:500px;
+                right:0;
+                color:white;
+                margin-top:15%;
+            }
+            .convo-1b{
+                font-family:Edu NSW ACT Foundation;
+                font-size:20px;
+                position:absolute;
+                left:0;
+                margin-left:10%;
+                color:white;
+                margin-top:22%;
+            }
+            .convo-1c{
+                font-family:Edu NSW ACT Foundation;
+                font-size:20px;
+                position:absolute;
+                width:500px;
+                right:0;
+                color:white;
+                margin-top:38%;
+            }
+            .convo-1d{
+                font-family:Edu NSW ACT Foundation;
+                font-size:20px;
+                position:absolute;
+                left:0;
+                margin-left:10%;
+                color:white;
+                margin-top:43%;
+            }
+            .image-1{
+                display: block; 
+                margin-left: auto; 
+                margin-right: auto; 
+                width: 50%;
+            }
+            .p6{
+                font-family:Edu NSW ACT Foundation;
+                font-size:25px;
+                text-align:center;
+                margin:5%;
+            }
+            .p7{
+                font-family:Edu NSW ACT Foundation;
+                font-size:25px;
+                width:40%;
+                position:absolute;
+                text-align:center;
+                left:0;
+                margin-top:2%;
+            }
+            .p8{
+                font-family:Edu NSW ACT Foundation;
+                font-size:25px;
+                width:40%;
+                position:absolute;
+                text-align:center;
+                right:0;
+                margin-top:2%;
+            }
+            .p9{
+                font-family:Edu NSW ACT Foundation;
+                font-size:25px;
+                text-align:center;
+                margin-top:18%;
+                margin-bottom:5%;
+            }
+            .image-2{
+                display: block; 
+                margin-left: auto; 
+                margin-right: auto; 
+                width: 50%;
+                margin-bottom:15%;
+            }
+            .p10{
+                font-family:Edu NSW ACT Foundation;
+                font-size:25px;
+                width:40%;
+                position:absolute;
+                text-align:center;
+                left:0;
+                margin-top:25%;
+            }
+            .p11{
+                font-family:Edu NSW ACT Foundation;
+                font-size:25px;
+                width:40%;
+                position:absolute;
+                text-align:center;
+                right:0;
+                margin-top:25%;
+            }
+            .convo-2a{
+                font-family:Edu NSW ACT Foundation;
+                font-size:20px;
+                position:absolute;
+                width:500px;
+                margin-left:10%;
+                left:0;
+                color:white;
+                margin-top:15%;
+            }
+            .convo-2b{
+                font-family:Edu NSW ACT Foundation;
+                font-size:20px;
+                position:absolute;
+                width:500px;
+                right:0;
+                color:white;
+                margin-top:35%;
+            }
+            .convo-2c{
+                font-family:Edu NSW ACT Foundation;
+                font-size:20px;
+                position:absolute;
+                width:500px;
+                margin-left:10%;
+                left:0;
+                color:white;
+                margin-top:38%;
+            }
+            .convo-2d{
+                font-family:Edu NSW ACT Foundation;
+                font-size:20px;
+                position:absolute;
+                width:500px;
+                right:0;
+                color:white;
+                margin-top:51%;
+            }
+            .convo-2e{
+                font-family:Edu NSW ACT Foundation;
+                font-size:20px;
+                position:absolute;
+                width:500px;
+                margin-left:10%;
+                left:0;
+                color:white;
+                margin-top:60%;
+            }
+            .p12{
+                font-family:Edu NSW ACT Foundation;
+                font-size:25px;
+                display:block;
+                text-align:center;
+            }
+            #p5js-1{
+                margin: 0 auto;
+            }
+            .p13{
+                font-family:Edu NSW ACT Foundation;
+                font-size:25px;
+                display:block;
+                text-align:center;
+                width:50%;
+                margin-left:25%;
+            } 
+            .p14{
+                font-family:Edu NSW ACT Foundation;
+                font-size:25px;
+                display:block;
+                text-align:center;
+                width:50%;
+                margin-left:25%;
+            }
+            .image-gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .image-gallery img {
+                width: calc(10% - 20px); /* Adjust the width based on your desired spacing */
+                margin: 10px; /* Add spacing between images */
+            }
+
+            .image-gallery img {
+                width: 20%; 
+                transition: transform 0.5s ease; 
+            }
+
+            .image-gallery img:hover {
+                transform: scale(1.25); 
+            } 
+            .p15{
+                font-family:Edu NSW ACT Foundation;
+                font-size:25px;
+                display:block;
+                text-align:center;
+            }
+            .video{
+                width: 70%;
+                display:block;
+                margin:0 auto;
+            }
+            /* #sketch-container-2{
+                margin: 0 auto;
+            } */
+            .p16{
+                font-family:Edu NSW ACT Foundation;
+                font-size:25px;
+                display:block;
+                margin-top:6%;
+                text-align:center;
+            }
+            .help-me-1{
+                width:40%;
+                object-fit:cover;
+                margin-left:10%;
+            }
+            .help-me-2{
+                width:40%;
+                object-fit:cover;
+            }
+            .p17{
+                font-family:Edu NSW ACT Foundation;
+                font-size:25px;
+                display:block;
+                text-align:center;
+            }
+            .youtube{
+                margin-left:25%;
+            }
+            .loki-image{
+                display:inline-block;
+            }
+            .p18{
+                font-family:Edu NSW ACT Foundation;
+                font-size:25px;
+                position:absolute;
+                display:inline-block;
+                text-align:left;
+                margin-left:1%;
+                line-height:1.4;
+            }
+            .video-2{
+                width: 70%;
+                display:block;
+                margin:0 auto;
+                margin-top:2%;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Titles and Whatnot -->
+        <p class="title">
+            Here is how creative coding went for me!!
+        </p>
+        <div class="p1">
+            <p>
+                Keep scrolling to see whether or not i make it!!!
+            </p>
+        </div>
+        <div class="p2">
+            <p>
+                This is my friend loki (he does computer science)
+            </p>
+        </div>
+        <div class="p3">
+            <p>
+                This is me (on the brink of ending it all)
+            </p>
+        </div>
+
+        <!-- What is generative design? -->
+        <div class="p4">
+            <p>
+                What is generative design? 
+            </p>
+            <div class="p5">
+                <p>
+                    Generative design is a fascinating field where code is employed to produce visual or auditory creations. In essence, they're pieces of design that were made on the computer but pretty much mainly through a gazillion lines of code. Or like, I don't know, twenty lines of code. Really depends on how ambitious you are. Oh - and we'll be using p5.js to do all that.
+                </p>
+            </div>
+        </div>
+
+        <!-- Discord 1 -->
+        <div class="convo-1a">
+            <p>
+                Me <br> Loki I am doing p5.js for my interactive media class
+            </p>
+            <p>
+                Have you heard of it before? 
+            </p>
+        </div>
+        <div class="convo-1b">
+            <p>
+                Loki <br> Yes actually, do you need help? 
+            </p>
+        </div>
+        <div class="convo-1c">
+            <p>
+                Me <br> Yes
+            </p>
+        </div>
+        <div class="convo-1d">
+            <p>
+                Loki <br> Tell me what you know so far and I'll help where I can :3 
+            </p>
+        </div>
+
+        <div class="discord-square-1"></div>
+        <div class="discord-square-2a"></div>
+        <div class="discord-square-3"></div>
+
+        <!-- Interactivity -->
+        <p class="p6">
+            In my first class about p5.js I learned that there are two main functions that I would be focusing on - the <b>setup</b> and the <b>draw</b> function. 
+        </p>
+
+        <img src="interactivity-1.jpg" class="image-1">
+
+            <div class="p7">
+                <p>
+                    The <b> setup </b> function runs once when your program starts. You can set up the screen size, background colour, media and other assests. It is the opening of the sketch and only happens once!
+                </p>
+            </div>
+            <div class="p8">
+                <p>
+                    The <b> draw </b> function is sort of the opposite. while the setup functions runs once, the draw functions runsat 60 frames per second, meaning that it updates and doesn't stop unless you tell it to!
+                </p>
+            </div>
+
+        <p class="p9">
+            Here's an example of how I used that to make this portrait of my deskmate, Helena!
+        </p>
+            <div class="p10">
+                <p>
+                    The <b> setup </b> function runs once and makes the canvas white. 
+                </p>
+            </div>
+            <div class="p11">
+                <p>
+                    The <b> draw </b> function makes a stroke (AKA, a black dot) on the page everytime the mouse is pressed. Since it updates 60 fps and saves the dot where it was, it allows me to draw a picture on the white canvas.
+                </p>
+            </div>
+
+        <img src="helena.png" class="image-2">
+
+        <!-- Discord 2 -->
+        <div class="convo-2a">
+            <p>
+                Loki <br> Woahh nice portrait 
+            </p>
+            <p>
+                But yes, that's what that is in a nutshell 
+            </p>
+        </div>
+        <div class="convo-2b">
+            <p>
+                Me <br> Awww thank you
+            </p>
+        </div>
+        <div class="convo-2c">
+            <p>
+                Loki <br> Did you use copilot? 
+            </p>
+        </div>
+        <div class="convo-2d">
+            <p>
+                Me <br> ...
+            </p>
+            <p>
+                ...yes
+            </p>
+        </div>
+        <div class="convo-2e">
+            <p>
+                Loki <br> That is totally normal 
+            </p>
+            <p>
+                Mess with the basics of that and you can come up with something interesting 
+            </p>
+        </div>
+
+        <div class="discord-square-1"></div>
+        <div class="discord-square-2b"></div>
+        <div class="discord-square-3"></div>
+
+        <div class="p12">
+            <p>
+                Keeping that in mind, for my creative coding project I started tinkering with the tools that I had available to me. Trying drawing in the empty white space here!
+            </p>
+        </div>
+
+
+        <!-- Drawing creative coding  -->
+        <div id="sketch-container-1">
+            <script>
+                function setup() {
+                    let canvas = createCanvas(windowWidth, windowHeight/2);
+                    canvas.parent('sketch-container-1');
+                    background(255);
+                }
+
+                function draw() {
+                    if (mouseIsPressed) {
+                    stroke(random(255), random(255), random(255));
+                    strokeWeight(10);
+                    line(mouseX, mouseY, pmouseX, pmouseY);
+                    }
+                }
+
+                function mousePressed() {
+                    background(random(255), random(255), random(255), 25);
+                }
+            </script>
+        </div>
+
+        <div class="p13">
+            <p>
+                I started by changing some bits from my basic sketch idea. Every frame makes the stroke a random colour, and everytime you press the mouse down the background colour changes and fades the past stroke.
+            </p>
+        </div>
+        <div class="p14">
+            <p>
+                To learn a little more about p5 though, I started focusing on just one bit: the setup function. And noise!
+            </p>
+        </div>
+
+        <div class="image-gallery">
+            <img src="Noise/noise-1.png">
+            <img src="Noise/noise-2.png">
+            <img src="Noise/noise-3.png">
+            <img src="Noise/noise-4.png">
+            <img src="Noise/noise-5.png">
+            <img src="Noise/noise-6.png">
+            <img src="Noise/noise-7.png">
+            <img src="Noise/noise-8.png">
+            <img src="Noise/noise-9.png">
+            <img src="Noise/noise-10.png">
+            <img src="Noise/noise-11.png">
+            <img src="Noise/noise-12.png">
+        </div>
+
+        <div class="p15">
+            <p>
+                Noise/Perlin noise generates a semi-random value based on specific coordinates. In this specific example that I made, I offset the points by just a tiny bit to make a wave-like pattern. And if you move those points around the canvas and make them jitter about, you get an effect that makes your eyes feel itchy:
+            </p>
+        </div>
+
+        <video autoplay loop muted class="video">
+            <source src="loki-noise.mp4" type="video/mp4">
+            <!-- Add other video formats (WebM, Ogg) if needed -->
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="p2">
+            <p>
+                Loki was the one who figured out how to make them move, actually. 
+            </p>
+        </div>
+        <div class="p3">
+            <p>
+                As much as I'd love to take credit for this, this was all him. Thank you, Loki! 
+            </p>
+        </div>
+
+        <div class="p16">
+            <p>
+                You can take a gander <a href="noise.html" target="_blank"> here</a> and generate your own special wave pattern (I could not figure out how to put it on this website, I am sorry)
+            </p>
+        </div>
+        
+        <img src="interactivity-2.jpg" class="help-me-1">
+        <img src="interactivity-3.jpg" class="help-me-2">        
+
+        <p class="p17">
+            In class, we talked about how we can group things into categories and that they can overlap and affect eachother. This resulted in trying to make venn diagrams which was so confusing that I cried after I left class! I had never felt more stupid in my life for not being able to grasp a concept that seemed so simple on paper! Yayyy!!!!
+        </p>
+
+        <!-- Discord Convo 3 -->
+        <div class="convo-1a">
+            <p>
+                Me <br> Hey
+            </p>
+            <p>
+                What if I walk into oncoming traffic
+            </p>
+        </div>
+        <div class="convo-1b">
+            <p>
+                Loki <br> Do not do that
+            </p>
+        </div>
+        <div class="convo-1c">
+            <p>
+                Me <br> I'm really struggling in this class. I feel so stupid
+            </p>
+        </div>
+        <div class="convo-1d">
+            <p>
+                Loki <br> Coding is kind of like that sometimes. Javascript is just stupid, don't worry
+            </p>
+        </div>
+
+        <div class="discord-square-1"></div>
+        <div class="discord-square-2a"></div>
+        <div class="discord-square-3"></div>
+
+        <p class="p17">
+            Loki ended up sending me a video that touched on some of the concepts I had learned in class in a way that I could sort of wrap my head around. 
+        </p>
+
+        <iframe width="700" height="400" src="https://www.youtube.com/embed/UsIF5r8rAvk?t=99" frameborder="0" allowfullscreen class="youtube"></iframe>
+
+        <p class="p17">
+            As well as an <a href="http://jeffreythompson.org/collision-detection/line-line.php" target="_blank">article</a> talking about a way to explore those topics in a visible and interactive way. 
+        </p>
+
+        <p class="p17">
+            In the video there was a cool example where they showed how you could make a glass cracking effect but didn't explain how to do so. So (with the help of Loki) I tried to come up with my own system to simulate a similar effect. 
+        </p>
+
+        <img src="lock-explanation.png" class="loki-sketch">
+
+        <p class="p18">
+            What we ended up coming up with was the following sets of rules:
+            <br> 1. When you press down the mouse, it creates an initial point. 
+            <br> 2. The initial point branches off into three random targets. 
+            <br> 3. These lines are labelled with the same group. For example: 1, 1 and 1. 
+            <br> 4. Everytime the mouse is pressed, it runs those same functions but the group number increments by 1. For example, 2, 2 and 2. 
+            <br> 5. When new lines are drawn, the code checks for an intersection on the most recent group of lines made. 
+            <br> 6. If there no intersection, nothing happens. 
+            <br> 7. If there is an intersection, the old target is deleted and the new target is replaced with the coordinates of the intersection to create the glass shattering effect. 
+        </p>
+
+        <video autoplay loop muted class="video-2">
+            <source src="glass.mp4" type="video/mp4">
+            <!-- Add other video formats (WebM, Ogg) if needed -->
+            Your browser does not support the video tag.
+        </video>
+
+        <p class="p17">
+            This is what it looks like because I don't know how to attatch the sketch properly :c
+        </p>
+
+        <!-- Discord Convo 4 -->
+        <div class="convo-1a">
+            <p>
+                Me <br> I did it :D
+            </p>
+            <p>
+                Well with your instructions of course you were a huuuuuge help
+            </p>
+        </div>
+        <div class="convo-1b">
+            <p>
+                Loki <br> Awww np np it was all your ideas 
+            </p>
+        </div>
+        <div class="convo-1c">
+            <p>
+                Me <br> Can I put you in my website as a source? 
+            </p>
+        </div>
+        <div class="convo-1d">
+            <p>
+                Loki <br> Yes. Yes you may. 
+            </p>
+        </div>
+
+        <div class="discord-square-1"></div>
+        <div class="discord-square-2b"></div>
+        <div class="discord-square-3"></div>
+
+        <!-- Noise creative coding -->
+        <!-- <div id="sketch-container-2">
+            <script>
+                function setup() {
+                    createCanvas(800, 600);
+                    background(0);
+                    stroke(255,255,255,180);
+                    strokeWeight(2.5)
+                    noFill();
+                    
+                    const spacing = 7; 
+                    
+                    for (let x = 0; x < width; x += spacing) {
+                    for (let y = 0; y < height; y += spacing) {
+                        let noiseOffset = noise(x * 0.003, y * 0.002) * 500 - 200; 
+                        point(x + noiseOffset, y + noiseOffset);
+                    }
+                    }
+                }
+            </script>
+        </div> -->
+
+        <img src="dreamy.png" class="dreamy noselect">
+        <img src="loki.png" class="loki noselect">
+    </body>
+</html>
+
+<!-- This bit is a colourful drawing thingy. 
+function setup() {
+    createCanvas(windowWidth, windowHeight);
+    background(255);
+  }
+  
+  function draw() {
+    // Lines will only be drawn when the mouse is pressed
+    if (mouseIsPressed) {
+      stroke(random(255), random(255), random(255));
+      strokeWeight(10);
+      line(mouseX, mouseY, pmouseX, pmouseY);
+    }
+  }
+  
+  // This function is called whenever the mouse is clicked
+  function mousePressed() {
+    // Randomize the background color
+    background(random(255), random(255), random(255), 25);
+  } -->
+  
+
+   <!-- This bit is just a black canvas filled with white points. 
+   function setup() {
+    createCanvas(800, 600);
+    background(0);
+    stroke(255);
+    noFill();
+    
+    const spacing = 20; // Adjust the spacing between points
+    
+    for (let x = 0; x < width; x += spacing) {
+      for (let y = 0; y < height; y += spacing) {
+        point(x, y);
+      }
+    }
+  }
+   -->
+
+   <!-- Noise bits
+   function setup() {
+    createCanvas(800, 600);
+    background(0);
+    stroke(255,255,255,180);
+    strokeWeight(2.5)
+    noFill();
+    
+    const spacing = 7; 
+    
+    for (let x = 0; x < width; x += spacing) {
+      for (let y = 0; y < height; y += spacing) {
+        let noiseOffset = noise(x * 0.003, y * 0.002) * 500 - 200; 
+        point(x + noiseOffset, y + noiseOffset);
+      }
+    }
+  } -->
