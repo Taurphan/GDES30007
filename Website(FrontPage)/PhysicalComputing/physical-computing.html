@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .Introduction{
+                font-family:Edu NSW ACT Foundation;
+                font-size:4vw;
+                text-align:center;
+                display:block;
+                margin-bottom:2%;
+                margin-top:4%;
+            }
+            .Image-1{
+                width:60%;
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            .Text-1{
+                font-family:Edu NSW ACT Foundation;
+                text-align:center;
+                font-size:2vw;
+                display:block;
+            }
+            .Text-2{
+                font-family:Edu NSW ACT Foundation;
+                text-align:center;
+                font-size:2vw;
+                margin-left:auto;
+                margin-right:auto;
+                display:block;
+            }
+            .flex-container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .video-item {
+                flex: 1 0 50%; /* flex-grow, flex-shrink, flex-basis */
+                margin: 2px;
+                /* Add any other styling you need for your videos */
+            }
+            .blink {
+            animation: blink 0.5s infinite;
+            }
+            @keyframes blink {
+                to {
+                    opacity: 0;
+                }
+            }
+            .Studying{
+                font-family:Edu NSW ACT Foundation;
+                font-size:2vw;
+                margin-left:5%;
+                margin-right:5%;
+                display:block;
+            }
+            .Studying-1{
+                display:block;
+            }
+            .single-video{
+                width:500px;
+            }
+            .typing-animation{
+                font-family:Edu NSW ACT Foundation;
+                font-size:2vw;
+                margin-left:5%;
+                margin-right:5%;
+                display:block;
+            }
+            #mydiv {
+            position: absolute;
+            z-index: 9;
+            text-align: center;
+            }
+
+            #mydivheader {
+            padding: 10px;
+            cursor: move;
+            z-index: 10;
+            }
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <p class="Introduction">
+            Man what IS all this junk?!
+        </p>
+        <img src="physical-computing-drawing.jpg" class="Image-1">
+        <p class="Text-1">
+            These are all of the pieces that we need to use for <b>physical computing</b>. 
+        </p>
+        <div class="flex-container">
+            <video autoplay loop muted class="video" class="video-item">
+                <source src="videos/video-1.mp4" type="video/mp4">
+                <!-- Add other video formats (WebM, Ogg) if needed -->
+                Your browser does not support the video tag.
+            </video>
+            <video autoplay loop muted class="video" class="video-item">
+                <source src="videos/video-2.mp4" type="video/mp4">
+                <!-- Add other video formats (WebM, Ogg) if needed -->
+                Your browser does not support the video tag.
+            </video>
+            <video autoplay loop muted class="video" class="video-item">
+                <source src="videos/video-3.mp4" type="video/mp4">
+                <!-- Add other video formats (WebM, Ogg) if needed -->
+                Your browser does not support the video tag.
+            </video>
+            <video autoplay loop muted class="video" class="video-item">
+                <source src="videos/video-4.mp4" type="video/mp4">
+                <!-- Add other video formats (WebM, Ogg) if needed -->
+                Your browser does not support the video tag.
+            </video>
+            <video autoplay loop muted class="video" class="video-item">
+                <source src="videos/video-5.mp4" type="video/mp4">
+                <!-- Add other video formats (WebM, Ogg) if needed -->
+                Your browser does not support the video tag.
+            </video>
+            <video autoplay loop muted class="video" class="video-item">
+                <source src="videos/video-1.mp4" type="video/mp4">
+                <!-- Add other video formats (WebM, Ogg) if needed -->
+                Your browser does not support the video tag.
+            </video>
+
+            </div>
+
+            <p class="Introduction">
+                It occurred to me that after doing these interactivities I don't actually understand how it works. Let's do some research. 
+            </p>
+        </script>
+
+        <p class="Studying">
+            <b>Breadboards</b>
+        </p>
+
+            <ul>
+                <li class="Studying">
+                    A breadboard is a rectangular plastic board with tiny holes. 
+                </li>
+                <li class="Studying">
+                    You insert electronic components (like resistors, LEDs, and wires) into these holes to prototype circuits. 
+                </li>
+                <li class="Studying">
+                    It allows you to build and test circuits without soldering. 
+                </li>
+                <li class="Studying">
+                    Think of it as a reusable platform for creating temporary electronic connections. 
+                </li>
+                <li class="Studying">
+                    <p id="demo"></p>
+                </li>
+            </ul>
+
+        <script>
+            const words = 
+                ["They actually aren't made of bread."];
+            let i = 0;
+            let timer;
+
+            function typeWriter() {
+                const word = words[i].split("");
+                const loopTyping = function () {
+                    if (word.length > 0) {
+                        document.getElementById("demo").innerHTML += word.shift();
+                    } else {
+                        deletingEffect();
+                        return false;
+                    }
+                    timer = setTimeout(loopTyping, 70); // Adjust the typing speed here
+                };
+                loopTyping();
+            }
+
+            function deletingEffect() {
+                const word = words[i].split("");
+                const loopDeleting = function () {
+                    if (word.length > 0) {
+                        word.pop();
+                        document.getElementById("demo").innerHTML = word.join("");
+                    } else {
+                        i = (i + 1) % words.length; // Cycle through words
+                        typeWriter();
+                        return false;
+                    }
+                    timer = setTimeout(loopDeleting, 50); // Adjust the deleting speed here
+                };
+                loopDeleting();
+            }
+
+            typeWriter();
+
+        </script>
+
+        <p class="Studying">
+            <b>Arduinos</b>
+        </p>
+
+            <ul>
+                <li class="Studying">
+                    Arduinos are open-source electronics platforms.
+                </li>
+                <li class="Studying">
+                    They consist of a physical programmable circuit board (microcontroller) and software (IDE).
+                </li>
+                <li class="Studying">
+                    Arduinos read inputs (e.g., light, button presses) and turn them into outputs (e.g., activating motors, LEDs, or publishing online).
+                </li>
+                <li class="Studying">
+                    They’re widely used for building electronic projects and are beginner-friendly.
+                </li>
+            </ul>
+
+        <p class="Introduction">
+            So how does THIS actually work?
+        </p>
+
+        <!-- This is the written out text describing the video.  -->
+
+            <video autoplay loop muted class="video" class="video-item">
+                <source src="videos/video-2.mp4" type="video/mp4">
+                <!-- Add other video formats (WebM, Ogg) if needed -->
+                Your browser does not support the video tag.
+            </video>
+            <video autoplay loop muted class="video" class="video-item">
+                <source src="videos/video-3.mp4" type="video/mp4">
+                <!-- Add other video formats (WebM, Ogg) if needed -->
+                Your browser does not support the video tag.
+            </video>
+
+            <p class="typing-animation">
+                A circuit is just a closed loop of electricity. When a voltage source such as a battery is connected to the circuit, it creates an electric potential difference. This causes the flow of electricity to move through the components and make things do things.  
+            </p>
+
+            <p class="typing-animation">
+                In order to close a circuit though, you need something called ground, which is essentially just the happy neutral between positive and negative. It creates a reference point, and without it the circuit wouldn't work. But we are connected to the ground all the time. So by using ourselves as the conductor and touching the live wire, the circuit just works. The code then measures this ground and makes the LED light up. Magic!
+            </p>
+
+        <div class="typing-animation">
+            <span class="text"></span>
+          </div>
+
+        <script>
+            const textElement = document.querySelector('.text');
+            const textToType = 'Oh, uh, ignore this typing. I am totally not typing this out as you are reading it, no sir! '; // Your pre-determined text
+
+            let charIndex = 0;
+
+            function typeText() {
+            if (charIndex < textToType.length) {
+                textElement.textContent += textToType.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeText, 350); // Adjust the typing speed (milliseconds)
+            }
+            }
+
+            // Start the typing animation
+            typeText();
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
+
+        <title>
+            Noooooise
+        </title>
+
+        <style>
+            .text{
+                color:white;
+                font-family:Edu NSW ACT Foundation;
+                font-size: 350%;
+                width:50%;
+                position:absolute;
+                text-align:center;
+                justify-content:center;
+                align-items:center;
+                display:block;
+                margin:20%;
+            }
+            .text:hover{
+                color:transparent;
+                transition:0.2s;
+            }
+        </style>
+    </head>
+    <body>
+        <p class=text>
+            Refresh the page for your own unique noise! Hover over <a></a>this text to get a nice view. 
+        </p>
+                <!-- Noise creative coding -->
+        <div id="sketch-container-2">
+            <script>
+                function setup() {
+                    createCanvas(windowWidth, windowHeight);
+                    background(0);
+                    stroke(255,255,255,180);
+                    strokeWeight(2.5)
+                    noFill();
+                    
+                    const spacing = 7; 
+                    
+                    for (let x = 0; x < width; x += spacing) {
+                    for (let y = 0; y < height; y += spacing) {
+                        let noiseOffset = noise(x * 0.003, y * 0.002) * 500 - 200; 
+                        point(x + noiseOffset, y + noiseOffset);
+                    }
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>

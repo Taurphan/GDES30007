@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="jGravity.js"></script>
+
+        <script>
+            $(document).ready(function() {
+
+                      $('body').jGravity({
+                           target: 'everything', 
+                           ignoreClass: 'Welcome',
+                           weight: 25,
+                           depth: 5,
+                           drag: true,
+                           callback: function () {
+                                console.log('Running...');
+                           }
+                    });
+
+            });
+        </script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap" rel="stylesheet">
+
+        <title>
+            Welcome
+        </title>
+
+        <style>
+            .Welcome{
+                font-family:Edu NSW ACT Foundation;
+                font-size:7vw;
+                text-align:center;
+                display:block;
+            }
+            .journal{
+                width:20%;
+
+            }
+            .computer{
+                width:20%;
+            }
+            .lamp{
+                width:11%;
+            }
+            .bread{
+                width:11%;
+            }
+            .cup{
+                width:6%;
+            }
+            .circle-1 {
+                height: 7vh;
+                width: 7vh;
+                background-color: rgb(245, 72, 101);
+                border-radius: 50%;
+                display: inline-block;
+            }
+            .circle-2 {
+                height: 7vh;
+                width: 7vh;
+                background-color: rgb(76, 88, 222);
+                border-radius: 50%;
+                display: inline-block;
+            }
+            .circle-3 {
+                height: 7vh;
+                width: 7vh;
+                background-color: rgb(76, 197, 112);
+                border-radius: 50%;
+                display: inline-block;
+            }
+            .circle-4 {
+                height: 7vh;
+                width: 7vh;
+                background-color: rgb(255, 234, 119);
+                border-radius: 50%;
+                display: inline-block;
+            }
+            .pointer {
+                cursor: pointer;
+            }
+        </style>
+
+    </head>
+    <body>
+            <p class="Welcome">
+                hi. welcome to my site. 
+            </p>
+
+            <!-- <a href="Research Journal/research-journal" target="_blank"> HERE IS THE LINK TO MY CREATIVE CODING </a> -->
+<!-- add js function which navigates to a link url onClick >> add to the img-->
+        <srcipt>
+            
+        </srcipt>
+            <img src="lamp.png" class="lamp pointer">
+            <img src="computer.png" class="computer pointer">
+            <img src="bread.png" class="bread pointer" onclick="window.open('PhysicalComputing/physical-computing.html')">
+            <img src="journal.png" class="journal pointer" onclick="window.open('ResearchJournal/research-journal.html')">
+            <img src="cup.png" class="cup pointer" onclick="window.open('Creative Coding/creative-coding.html')">
+            <!-- One of my main concerns right now is that when there's only two images on the site, they are both affected by gravity. However
+            when there is three, one of them will stop working sometimes if you refresh the page and I cannot figure out why. -->
+
+            <!-- BALL PIT!! -->
+            <span class="circle-1"></span>
+            <span class="circle-1"></span>
+            <span class="circle-1"></span>
+            <span class="circle-1"></span>
+            <span class="circle-1"></span>
+            <span class="circle-1"></span>
+            <span class="circle-1"></span>
+            <span class="circle-1"></span>
+            <span class="circle-1"></span>
+            <span class="circle-1"></span>
+            <span class="circle-2"></span>
+            <span class="circle-2"></span>
+            <span class="circle-2"></span>
+            <span class="circle-2"></span>
+            <span class="circle-2"></span>
+            <span class="circle-2"></span>
+            <span class="circle-2"></span>
+            <span class="circle-2"></span>
+            <span class="circle-2"></span>
+            <span class="circle-2"></span>
+            <span class="circle-3"></span>
+            <span class="circle-3"></span>
+            <span class="circle-3"></span>
+            <span class="circle-3"></span>
+            <span class="circle-3"></span>
+            <span class="circle-3"></span>
+            <span class="circle-3"></span>
+            <span class="circle-3"></span>
+            <span class="circle-3"></span>
+            <span class="circle-3"></span>
+            <span class="circle-4"></span>
+            <span class="circle-4"></span>
+            <span class="circle-4"></span>
+            <span class="circle-4"></span>
+            <span class="circle-4"></span>
+            <span class="circle-4"></span>
+            <span class="circle-4"></span>
+            <span class="circle-4"></span>
+            <span class="circle-4"></span>
+            <span class="circle-4"></span>
+            
+
+            <!-- I want to figure out how to make these balls spawn in a random order rather than in the order that the code is written in, as 
+            well as how to make them appear in a random order every time. -->
+
+            <!-- Also the balls are not responsive. When you resize the web browser (for example, make it a little smaller) it makes the 
+            browser expand rather than the balls catching on the side of the browser and moving as the size of the web browwser changes.
+            I would like to figure out how to make this more responsive.-->
+
+    </body>
+</html>

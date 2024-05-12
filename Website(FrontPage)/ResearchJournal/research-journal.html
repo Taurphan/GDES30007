@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Research Journal
+    </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .paper-stack {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .paper {
+            position: absolute;
+            margin-left:20%;
+            margin-top:4%;
+            transform: rotate(calc(var(--angle) * 1deg));
+            z-index: var(--z-index);
+            transition: transform 0.5s ease;
+        }
+
+        .hidden-image {
+            display: none; /* Initially hidden */
+        }
+
+        /* Add more images with different angles and z-index values */
+        .paper:nth-child(1) {
+            --angle: 3;
+            --z-index: 11;
+        }
+
+        .paper:nth-child(1):hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+        .paper:nth-child(2) {
+            --angle: -5;
+            --z-index: 10;
+        }
+
+        .paper:nth-child(2):hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+        .paper:nth-child(3) {
+            --angle: 10;
+            --z-index: 9;
+        }
+
+        .paper:nth-child(3):hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+        .paper:nth-child(4) {
+            --angle: 9;
+            --z-index: 8;
+        }
+
+        .paper:nth-child(4):hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+        .paper:nth-child(5) {
+            --angle: 2;
+            --z-index: 7;
+        }
+
+        .paper:nth-child(5):hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+        .paper:nth-child(6) {
+            --angle: 4;
+            --z-index: 6;
+        }
+
+        .paper:nth-child(6):hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+        .paper:nth-child(7) {
+            --angle: 21;
+            --z-index: 5;
+        }
+
+        .paper:nth-child(7):hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+        .paper:nth-child(8) {
+            --angle: 3;
+            --z-index: 4;
+        }
+
+        .paper:nth-child(8):hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+        .paper:nth-child(9) {
+            --angle: 16;
+            --z-index: 3;
+        }
+
+        .paper:nth-child(9):hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+        .paper:nth-child(10) {
+            --angle: 24;
+            --z-index: 2;
+        }
+
+        .paper:nth-child(10):hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+        .paper:nth-child(11) {
+            --angle: 2;
+            --z-index: 1;
+        }
+
+        .paper:nth-child(11):hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+        /* Adjust image size and other styles as needed */
+        .paper img {
+            width: 80%;
+            height: auto;
+        }
+
+        .wait img{
+            width:450px;
+            margin-left: calc(50vw - 225px);
+            margin-top: 10%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="paper-stack">
+        <div class="paper"><img src="avogado6/avogado6-spread.png" alt="Paper 1" onclick="hideImage(this)"></div>
+        <div class="paper"><img src="Desktop Pets/desktop-pets-spread.png" alt="Paper 2" onclick="hideImage(this)"></div>
+        <div class="paper"><img src="ELECTRONICOS FANTASTICOS/ELECTRONICOS-FANTASTICOS-spread.png" alt="Paper 3" onclick="hideImage(this)"></div>
+        <div class="paper"><img src="GMUNK/GMUNK-spread.png" alt="Paper 4" onclick="hideImage(this)"></div>
+        <div class="paper"><img src="Max Dorf/Max-Dorf-spread.png" alt="Paper 5" onclick="hideImage(this)"></div>
+        <div class="paper"><img src="Night in the Woods/Night-in-the-woods_spread.png" alt="Paper 6" onclick="hideImage(this)"></div>
+        <div class="paper"><img src="Oxenfree/Oxenfree-spread.png" alt="Paper 7" onclick="hideImage(this)"></div>
+        <div class="paper"><img src="Max Dorf/Max-Dorf-spread.png" alt="Paper 8" onclick="hideImage(this)"></div>
+        <div class="paper"><img src="Vera Molnar/Vera-Molnar-spread.png" alt="Paper 9" onclick="hideImage(this)"></div>
+        <div class="paper"><img src="Yayoi Kusama/Yayoi-Kusama-spread.png" alt="Paper 10" onclick="hideImage(this)"></div>
+        <div class="paper"><img src="Zach Lierberman/Zach-Lieberman-spread.png" alt="Paper 11" onclick="hideImage(this)"></div>
+        <div class="wait"><img src="wait.jpg" alt="paper 12"></img></div>
+        <!-- Add more images here -->
+    </div>
+    <script>
+        function hideImage(img) {
+            img.style.display = "none"; // Hide the image
+        }
+    </script>
+</body>
+</html>
