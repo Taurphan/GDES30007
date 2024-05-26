@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <style>
+            body{
+                font-family:Oswald;
+                background-image: url(FeaturedArt/Background.png);
+            }
+            p{
+                color:white;
+            }
+
+            /* This is the big heading at the top.  */
+
+            .wrapper{
+                display:flex;
+                background-color:rgba(0, 0, 0, 0.8);
+                width:1480px;
+                height: 65px;
+            }
+            .Dreamy{
+                font-size:40px;
+                margin-left:20px;
+                color:orange;
+            }
+            .Subheading{
+                width:200px;
+                margin-left:15px;
+            }
+            .Login{
+                font-size:20px;
+                float: right;
+                margin-top:13px;
+                margin-left:0px;
+                color:orange;
+            }
+            .Search{
+                margin-left:190px;
+                margin-right:390px;
+                margin-top:15px;
+                padding-left:8px;
+                /* padding-right:280px; */
+                width:395px;
+                padding-top:7px;
+                padding-bottom:7px;
+                border:none;
+                border-radius:5px;
+            }
+
+            /* This is all of the buttons.  */
+
+            .wrapper-2{
+                display:flex;
+                width:1480px;
+            }
+            button{
+                font-size:15px;
+                font-family:Oswald;
+                padding-left:99px;
+                padding-right:99px;
+                border-radius:5px;
+            }
+            .ART{
+                border-color: orange;
+                border-width:3px;
+            }
+
+            /* Here is where all the content is going to be.  */
+
+            .Content{
+                width:1100px;
+                margin-left:200px;
+                margin-top:150px;
+                height:2000px;
+            }
+            .image-gallery{
+                display:flex;
+                width:1000px;
+                flex-wrap: wrap;
+                gap:10px;
+                justify-content: center;
+                margin-left:48px;
+            }
+            img{
+                width:400px;
+                height:300px;
+                object-fit:cover;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div>
+                <a href="google.com" style="text-decoration: none;" class="Dreamy">DREAMY</a>
+            </div>
+            <div>
+                <p class="Subheading">
+                    Crafting Worlds Together
+                </p>
+            </div>
+            <div>
+                <input type="text" placeholder="Search" class="Search" style="font-family:Oswald;">
+            </div>
+            <div>
+                <a href="google.com" style="text-decoration: none;" class="Login">Login/Sign up</a>
+            </div>
+        </div>
+        <div class="wrapper-2">
+            <button class="HOME" onclick="window.location.href='frontpage.html';" style="cursor:pointer;" target="_blank">
+                HOME
+            </button>
+            <button class="GAMES" onclick="window.location.href='games.html';" style="cursor:pointer;" target="_blank">
+                GAMES
+            </button>
+            <button class="ART" onclick="window.location.href='art.html';" style="cursor:pointer;">
+                ART
+            </button>
+            <button class="NEWS" onclick="window.location.href='news.html';" style="cursor:pointer;" target="_blank">
+                NEWS
+            </button>
+            <button class="COMMUNITY" onclick="window.location.href='community.html';" style="cursor:pointer;" target="_blank">
+                COMMUNITY
+            </button>
+            <button class="MY-PROFILE">
+                MY PROFILE
+            </button>
+        </div>
+        <div style="background-color: rgba(0,0,0,0.5); border-radius: 5px;" class="Content">
+            <div>
+                <p style="margin-left:25px; padding-top:20px; color: orange;">
+                    <b>FEATURED</b> / LATEST / MOST FAVOURITES
+                </p>
+            </div>
+            <div class="image-gallery">
+                <div style="background-color: rgba(0,0,0,0.8); padding:10px; display:inline-block;">
+                    <img src="FeaturedArt/Anger.jpg">
+                    <p style="text-align: center; margin:0px; color: orange;">
+                        random character study XD
+                    </p>
+                    <p style="text-align: center; font-size:13px; margin:0px; color: orange;">
+                        By: skibblypebbles
+                    </p>
+                </div>
+                <div style="background-color: rgba(0,0,0,0.8); padding:10px; display:inline-block;">
+                    <img src="FeaturedArt/Bubble.jpg">
+                    <p style="text-align: center; margin:0px; color: orange;">
+                       floating away
+                    </p>
+                    <p style="text-align: center; font-size:13px; margin:0px; color: orange;">
+                        By: akari_77
+                    </p>
+                </div>
+                <div style="background-color: rgba(0,0,0,0.8); padding:10px; display:inline-block;">
+                    <img src="FeaturedArt/Cat.jpg">
+                    <p style="text-align: center; margin:0px; color: orange;">
+                       ears
+                    </p>
+                    <p style="text-align: center; font-size:13px; margin:0px; color: orange;">
+                        By: minniee
+                    </p>
+                </div>
+                <div style="background-color: rgba(0,0,0,0.8); padding:10px; display:inline-block;">
+                    <img src="FeaturedArt/Character.jpg">
+                    <p style="text-align: center; margin:0px; color: orange;">
+                       you n me and three
+                    </p>
+                    <p style="text-align: center; font-size:13px; margin:0px; color: orange;">
+                        By: jules__
+                    </p>
+                </div>
+                <div style="background-color: rgba(0,0,0,0.8); padding:10px; display:inline-block;">
+                    <img src="FeaturedArt/Cool.jpg">
+                    <p style="text-align: center; margin:0px; color: orange;">
+                       Cool guy doing cool things
+                    </p>
+                    <p style="text-align: center; font-size:13px; margin:0px; color: orange;">
+                        By: hopjumpandskip
+                    </p>
+                </div>
+                <div style="background-color: rgba(0,0,0,0.8); padding:10px; display:inline-block;">
+                    <img src="FeaturedArt/Kiss.jpg">
+                    <p style="text-align: center; margin:0px; color: orange;">
+                       lost in a dreamy
+                    </p>
+                    <p style="text-align: center; font-size:13px; margin:0px; color: orange;">
+                        By: kraziks09
+                    </p>
+                </div>
+                <div style="background-color: rgba(0,0,0,0.8); padding:10px; display:inline-block;">
+                    <img src="FeaturedArt/Sad.jpg">
+                    <p style="text-align: center; margin:0px; color: orange;">
+                       Cried Today
+                    </p>
+                    <p style="text-align: center; font-size:13px; margin:0px; color: orange;">
+                        By: x_2000sbb_X
+                    </p>
+                </div>
+                <div style="background-color: rgba(0,0,0,0.8); padding:10px; display:inline-block;">
+                    <img src="FeaturedArt/Star.jpg">
+                    <p style="text-align: center; margin:0px; color: orange;">
+                        I love Britney Spears
+                    </p>
+                    <p style="text-align: center; font-size:13px; margin:0px; color: orange;">
+                        By: mamamoomee_star
+                    </p>
+                </div>
+                <div style="background-color: rgba(0,0,0,0.8); padding:10px; display:inline-block;">
+                    <img src="FeaturedArt/Fish.jpg">
+                    <p style="text-align: center; margin:0px; color: orange;">
+                        BLUB BLUB!!!
+                    </p>
+                    <p style="text-align: center; font-size:13px; margin:0px; color: orange;">
+                        By: superblackshader
+                    </p>
+                </div>
+                <div style="background-color: rgba(0,0,0,0.8); padding:10px; display:inline-block;">
+                    <img src="FeaturedArt/Dream.jpg">
+                    <p style="text-align: center; margin:0px; color: orange;">
+                       Fallin
+                    </p>
+                    <p style="text-align: center; font-size:13px; margin:0px; color: orange;">
+                        By: k4gst_04
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

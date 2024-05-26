@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <style>
+            body{
+                font-family:Oswald;
+                background-image: url(FeaturedArt/Background.png);
+            }
+            p{
+                color:white;
+            }
+
+            /* This is the big heading at the top.  */
+
+            .wrapper{
+                display:flex;
+                background-color:rgba(0, 0, 0, 0.8);
+                width:1480px;
+                height: 65px;
+            }
+            .Dreamy{
+                font-size:40px;
+                margin-left:20px;
+                color:orange;
+            }
+            .Subheading{
+                width:200px;
+                margin-left:15px;
+            }
+            .Login{
+                font-size:20px;
+                float: right;
+                margin-top:13px;
+                margin-left:0px;
+                color:orange;
+            }
+            .Search{
+                margin-left:190px;
+                margin-right:390px;
+                margin-top:15px;
+                padding-left:8px;
+                /* padding-right:280px; */
+                width:395px;
+                padding-top:7px;
+                padding-bottom:7px;
+                border:none;
+                border-radius:5px;
+            }
+
+            /* This is all of the buttons.  */
+
+            .wrapper-2{
+                display:flex;
+                width:1480px;
+            }
+            button{
+                font-size:15px;
+                font-family:Oswald;
+                padding-left:99px;
+                padding-right:99px;
+                border-radius:5px;
+            }
+            .NEWS{
+                border-color: orange;
+                border-width:3px;
+            }
+
+            /* Here is where all the content is going to be.  */
+
+            .Content{
+                width:1100px;
+                margin-left:200px;
+                margin-top:150px;
+                height:2000px;
+            }
+            .GoTW{
+                font-size:60px;
+                text-align:center;
+                color: orange;
+            }
+            .AoTW{
+                font-size:60px;
+                text-align:center;
+                margin-bottom:25px;
+                color: orange;
+            }
+            .Past-Features{
+                font-size:25px;
+                margin-left:51px;
+            }
+            .image-gallery{
+                display:flex;
+                width:1000px;
+                flex-wrap: wrap;
+                gap:10px;
+                justify-content: center;
+                margin-left:48px;
+            }
+            img{
+                width:325px;
+                height:200px;
+                object-fit:cover;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div>
+                <a href="google.com" style="text-decoration: none;" class="Dreamy">DREAMY</a>
+            </div>
+            <div>
+                <p class="Subheading">
+                    Crafting Worlds Together
+                </p>
+            </div>
+            <div>
+                <input type="text" placeholder="Search" class="Search" style="font-family:Oswald;">
+            </div>
+            <div>
+                <a href="google.com" style="text-decoration: none;" class="Login">Login/Sign up</a>
+            </div>
+        </div>
+        <div class="wrapper-2">
+            <button class="HOME" onclick="window.location.href='frontpage.html';" style="cursor:pointer;" target="_blank">
+                HOME
+            </button>
+            <button class="GAMES" onclick="window.location.href='games.html';" style="cursor:pointer;" target="_blank">
+                GAMES
+            </button>
+            <button class="ART" onclick="window.location.href='art.html';" style="cursor:pointer;" target="_blank">
+                ART
+            </button>
+            <button class="NEWS" onclick="window.location.href='news.html';" style="cursor:pointer;">
+                NEWS
+            </button>
+            <button class="COMMUNITY" onclick="window.location.href='community.html';" style="cursor:pointer;" target="_blank">
+                COMMUNITY
+            </button>
+            <button class="MY-PROFILE">
+                MY PROFILE
+            </button>
+        </div>
+        <div style="background-color: rgba(0,0,0,0.5); border-radius: 5px; height:1500px; padding-top:10px;" class="Content">
+            <div>
+                <p class="GoTW" style="margin-top:20px;">
+                    UPDATE 7.1.5
+                </p>
+            </div>
+            <div>
+                <p style="width:1000px; margin-left:65px;">
+                    Hi all! Thank you so much for the positive reception on the last update. You'll be happy to hear that our cat, Tuxedo, is in much better health and is looking to make a full recovery. Everyone say hello to the lovely Tux!
+                </p>
+                <p style="width:1000px; margin-left:65px;">
+                    Now onto business. 
+                </p>
+                <p style="width:1000px; margin-left:65px;">
+                    As we all know, ever since the dawn of time we have been on the hunt looking for a suitable backdrop for all of the Dreamy webpages. Luckily, thanks to our resident designer Eletux (Toby) we now customised backdrops for all of them! If you see them around parusing the forums, please do me and the Dreamy team a huge favour and thank them! They definitely put a lot of work into making it what it is and I couldn't be more grateful. 
+                </p>
+                <p style="width:1000px; margin-left:65px;">
+                    And for our winners of this weeks lucky draw we have: 
+                </p>
+                <p style="width:1000px; margin-left:65px;">
+                    Disneymurmur, tanglio4 and SUPERST4RR! Congratulations to the three of you and feel free to contact any of our active mods for more details about your prizes. 
+                </p>
+                <p style="width:1000px; margin-left:65px;">
+                    In terms of updates, I've made some minor changes to Dreamy that I hope help to improve the experience of our awesome game creators on the site! We have: 
+                </p>
+                <p style="width:1000px; margin-left:65px;">
+                    1. Updated our libraries to include p5.js support as well as a little plug in that allows for a lot less finagling moving files from desktop to browser...
+                </p>
+                <p style="width:1000px; margin-left:65px;">
+                    2. Change our original div layout to a bento-style layout to make it a little more accessible for our visually impaired developers...
+                </p>
+                <p style="width:1000px; margin-left:65px;">
+                    3. And shortened upload times by about half! Big thanks to ninjamuffin99 for that fix, and feel free to check out his game "Friday Night Funkin" and show the man some love. Absolute computer whiz!
+                </p>
+                <p style="width:1000px; margin-left:65px;">
+                    To our game makers, please feel free to leave a comment about the changes, whether you love 'em, hate 'em, your feedback is crucial.
+                </p>
+                <p style="width:1000px; margin-left:65px; margin-bottom:35px;">
+                    Hope everyone is having a splendid week and look forward to continuing our weekly updates!
+                </p>
+            </div>
+            <div>
+                <div>
+                    <p class="Past-Features" style="margin-top:5px; color:orange;">
+                        COMMENTS
+                    </p>
+                </div>
+                <div style="padding-top:18px; padding-left:50px; padding-bottom:20px;">
+                    <div style="background-color:rgba(0,0,0,0.5); width:990px; padding-top:10px; padding-left:10px; padding-bottom:1px; padding-top:14px; border-radius:5px;">
+                        <div style="display:flex;">
+                            <img src="FeaturedArt/BunnyGirl.jpg" style="width:50px; height:50px; border-radius:50%;">
+                            <p style="display:inline-block; margin-left:15px;">
+                                AHHHH WE LOVE YOU TUXEDO!!
+                            </p>
+                            <p style="display:inline-block; margin-left:890px; margin-top: 0px; position:absolute; color:orange;">
+                                59 Favourites
+                            </p>
+                        </div>
+                        <p style="margin-top:0px; font-size:15px; display:inline-block; color: orange;">
+                            @k4gst_04
+                        </p>
+                        <p style="margin-top:0px; font-size:15px; display:inline-block; margin-left:820px; color:orange;">
+                            19:07 06/11/15
+                        </p>
+                    </div>
+                    <div style="background-color:rgba(0,0,0,0.5); width:990px; padding-top:10px; padding-left:10px; padding-bottom:1px; padding-top:14px; border-radius:5px; margin-top:10px;">
+                        <div style="display:flex;">
+                            <img src="ProfilePicture/Five.png" style="width:50px; height:50px; border-radius:50%;">
+                            <p style="display:inline-block; margin-left:15px;">
+                                so glad to have weekly updates back again now that tuxedo is in good health c: 
+                            </p>
+                            <p style="display:inline-block; margin-left:890px; margin-top: 0px; position:absolute; color:orange;">
+                                11 Favourites
+                            </p>
+                        </div>
+                        <p style="margin-top:0px; font-size:15px; display:inline-block; color: orange;">
+                            @superbsaiyan
+                        </p>
+                        <p style="margin-top:0px; font-size:15px; display:inline-block; margin-left:795px; color:orange;">
+                            15:43 05/11/15
+                        </p>
+                    </div>
+                    <div style="background-color:rgba(0,0,0,0.5); width:990px; padding-top:10px; padding-left:10px; padding-bottom:1px; padding-top:14px; border-radius:5px; margin-top:10px;">
+                        <div style="display:flex;">
+                            <img src="ProfilePicture/Eight.jpg" style="width:50px; height:50px; border-radius:50%;">
+                            <p style="display:inline-block; margin-left:15px;">
+                                that was all me 
+                            </p>
+                            <p style="display:inline-block; margin-left:890px; margin-top: 0px; position:absolute; color:orange;">
+                                201 Favourites
+                            </p>
+                        </div>
+                        <p style="margin-top:0px; font-size:15px; display:inline-block; color: orange;">
+                            @ninjamuffin99
+                        </p>
+                        <p style="margin-top:0px; font-size:15px; display:inline-block; margin-left:795px; color:orange;">
+                            11:49 05/11/15
+                        </p>
+                    </div>
+                    <div style="background-color:rgba(0,0,0,0.5); width:990px; padding-top:10px; padding-left:10px; padding-bottom:1px; padding-top:14px; border-radius:5px; margin-top:10px;">
+                        <div style="display:flex;">
+                            <img src="ProfilePicture/One.jpg" style="width:50px; height:50px; border-radius:50%;">
+                            <p style="display:inline-block; margin-left:15px;">
+                                loving the new ui! the loadtimes were my main gripe, but I feel like things are running a lot smoother now
+                            </p>
+                            <p style="display:inline-block; margin-left:890px; margin-top: 0px; position:absolute; color:orange;">
+                                7 Favourites
+                            </p>
+                        </div>
+                        <p style="margin-top:0px; font-size:15px; display:inline-block; color: orange;">
+                            @muzakkiTV
+                        </p>
+                        <p style="margin-top:0px; font-size:15px; display:inline-block; margin-left:810px; color:orange;">
+                            11:08 05/11/15
+                        </p>
+                    </div>
+                    <div style="background-color:rgba(0,0,0,0.5) ; width:990px; padding-top:10px; padding-left:10px; padding-bottom:1px; padding-top:14px; border-radius:5px; margin-top:10px;">
+                        <div style="display:flex;">
+                            <img src="ProfilePicture/One.jpg" style="width:50px; height:50px; border-radius:50%;">
+                            <p style="display:inline-block; margin-left:15px;">
+                                naming a Tuxedo cat Tuxedo is such a hat on a hat name lol 
+                            </p>
+                            <p style="display:inline-block; margin-left:890px; margin-top: 0px; position:absolute; color:orange;">
+                                94 Favourites
+                            </p>
+                        </div>
+                        <p style="margin-top:0px; font-size:15px; display:inline-block; color: orange;">
+                            @staceyleigh_
+                        </p>
+                        <p style="margin-top:0px; font-size:15px; display:inline-block; margin-left:810px; color:orange;">
+                            12:01 05/11/15
+                        </p>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>
